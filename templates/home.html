@@ -1,0 +1,32 @@
+{% extends 'basic.html' %}
+{% block title %} Neelam yadav {% endblock title %}
+{% load static %}
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/theme.css' %}">
+    <script src="{% static 'js/theme.js' %}"></script>
+
+{% block hero %}
+
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      
+
+      <h1>Neelam Yadav</h1>
+      <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer"></span></p>
+    </div>
+  </section>
+
+{% endblock hero %}
+{% block body %}
+
+{% for message in messages %}
+
+<div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+  <strong>{{message}} </strong> 
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+
+{% endblock body %}
